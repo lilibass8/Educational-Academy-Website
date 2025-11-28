@@ -1,0 +1,116 @@
+import React from 'react';
+import './Footer.css';
+
+const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer className="footer">
+            <div className="container">
+                <div className="footer-content">
+                    <div className="footer-section">
+                        <div className="footer-logo">
+                            <div className="logo-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M20 5L35 15V25L20 35L5 25V15L20 5Z" fill="url(#footer-logo-gradient)" />
+                                    <defs>
+                                        <linearGradient id="footer-logo-gradient" x1="5" y1="5" x2="35" y2="35">
+                                            <stop offset="0%" stopColor="#667eea" />
+                                            <stop offset="100%" stopColor="#764ba2" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>أكاديمية المعرفة</h3>
+                                <p>رحلة التعلم تبدأ هنا</p>
+                            </div>
+                        </div>
+                        <p className="footer-description">
+                            منصة تعليمية احترافية تقدم دورات وورش عمل في مختلف المجالات
+                            لمساعدتك على تطوير مهاراتك وتحقيق أهدافك.
+                        </p>
+                        <div className="social-links">
+                            <a href="#" className="social-link" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" />
+                                </svg>
+                            </a>
+                            <a href="#" className="social-link" aria-label="Twitter">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                            <a href="#" className="social-link" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 0C7.284 0 6.944.012 5.877.06 4.813.11 4.086.278 3.45.525a4.902 4.902 0 00-1.772 1.153A4.902 4.902 0 00.525 3.45C.278 4.086.109 4.813.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.05 1.064.218 1.791.465 2.427a4.902 4.902 0 001.153 1.772 4.902 4.902 0 001.772 1.153c.636.247 1.363.416 2.427.465C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c1.064-.05 1.791-.218 2.427-.465a4.902 4.902 0 001.772-1.153 4.902 4.902 0 001.153-1.772c.247-.636.416-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.05-1.064-.218-1.791-.465-2.427a4.902 4.902 0 00-1.153-1.772A4.902 4.902 0 0016.55.525C15.914.278 15.187.109 14.123.06 13.056.012 12.716 0 10 0zm0 1.802c2.67 0 2.986.01 4.04.058.976.045 1.505.207 1.858.344.466.182.8.398 1.15.748.35.35.566.684.748 1.15.137.353.3.882.344 1.857.048 1.055.058 1.37.058 4.041 0 2.67-.01 2.986-.058 4.04-.045.976-.207 1.505-.344 1.858a3.097 3.097 0 01-.748 1.15c-.35.35-.684.566-1.15.748-.353.137-.882.3-1.857.344-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-.976-.045-1.505-.207-1.858-.344a3.097 3.097 0 01-1.15-.748 3.098 3.098 0 01-.748-1.15c-.137-.353-.3-.882-.344-1.857-.048-1.055-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.045-.976.207-1.505.344-1.858.182-.466.398-.8.748-1.15.35-.35.684-.566 1.15-.748.353-.137.882-.3 1.857-.344 1.055-.048 1.37-.058 4.041-.058zM10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm6.538-8.671a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z" />
+                                </svg>
+                            </a>
+                            <a href="#" className="social-link" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM4.943 8.57a1.548 1.548 0 01-1.548-1.549 1.549 1.549 0 113.097 0 1.548 1.548 0 01-1.549 1.549zm1.336 9.769H3.605V9.75h2.674v8.589zM19.67 0H.329C.146 0 0 .145 0 .324v19.352C0 19.855.145 20 .329 20h19.341c.184 0 .33-.145.33-.324V.324C20 .145 19.855 0 19.671 0h-.001z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="footer-section">
+                        <h4 className="footer-title">روابط سريعة</h4>
+                        <ul className="footer-links">
+                            <li><a href="#home">الرئيسية</a></li>
+                            <li><a href="#courses">الدورات</a></li>
+                            <li><a href="#about">عن الأكاديمية</a></li>
+                            <li><a href="#contact">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="footer-section">
+                        <h4 className="footer-title">الفئات</h4>
+                        <ul className="footer-links">
+                            <li><a href="#design">التصميم والإبداع</a></li>
+                            <li><a href="#productivity">الإنتاجية والتطوير الذاتي</a></li>
+                            <li><a href="#beauty">الجمال ونمط الحياة</a></li>
+                            <li><a href="#kids">تعليم الأطفال</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="footer-section">
+                        <h4 className="footer-title">تواصل معنا</h4>
+                        <ul className="footer-contact">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M2 5l6 4 6-4M2 5v6a1 1 0 001 1h10a1 1 0 001-1V5M2 5a1 1 0 011-1h10a1 1 0 011 1" stroke="currentColor" strokeWidth="1.5" />
+                                </svg>
+                                <span>info@academy.com</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" strokeWidth="1.5" />
+                                    <path d="M5 6.5l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                <span>+966 50 123 4567</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 14A6 6 0 108 2a6 6 0 000 12z" stroke="currentColor" strokeWidth="1.5" />
+                                    <path d="M8 4v4l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                </svg>
+                                <span>السبت - الخميس: 9 صباحاً - 5 مساءً</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="footer-bottom">
+                    <p>&copy; {currentYear} أكاديمية المعرفة. جميع الحقوق محفوظة.</p>
+                    <div className="footer-legal">
+                        <a href="#privacy">سياسة الخصوصية</a>
+                        <a href="#terms">الشروط والأحكام</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;
