@@ -60,7 +60,7 @@ const CourseCard = ({ course }) => {
                     ) : (
                         <div className="course-price">
                             <span className="price-amount">{price}</span>
-                            <span className="price-currency">ريال</span>
+                            <span className="price-currency">ر.ع</span>
                         </div>
                     )}
 
