@@ -1,0 +1,200 @@
+.admin-sidebar {
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: width var(--transition-normal);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.admin-sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar-logo .logo-icon {
+    flex-shrink: 0;
+}
+
+.sidebar-logo h3 {
+    font-size: var(--text-base);
+    margin: 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+}
+
+.sidebar-logo span {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    display: block;
+    white-space: nowrap;
+}
+
+.toggle-btn {
+    background: var(--bg-hover);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.toggle-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.admin-sidebar.collapsed .toggle-btn svg {
+    transform: rotate(90deg);
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: var(--spacing-md) 0;
+    overflow-y: auto;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--text-secondary);
+    font-size: var(--text-base);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    border-right: 3px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    width: 100%;
+    text-align: right;
+}
+
+.sidebar-link:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--text-primary);
+}
+
+.sidebar-link.active {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--primary-light);
+    border-right-color: var(--primary);
+}
+
+.sidebar-link svg {
+    flex-shrink: 0;
+}
+
+.admin-sidebar.collapsed .sidebar-link {
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.admin-sidebar.collapsed .sidebar-link span {
+    display: none;
+}
+
+.sidebar-footer {
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logout-btn {
+    color: #ef4444;
+}
+
+.logout-btn:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .admin-sidebar.collapsed {
+        width: 100%;
+    }
+
+    .sidebar-header {
+        padding: var(--spacing-md);
+    }
+
+    .sidebar-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: var(--spacing-md);
+    }
+
+    .sidebar-link {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: var(--spacing-md);
+        border-right: none;
+        border-bottom: 3px solid transparent;
+        text-align: center;
+        font-size: var(--text-sm);
+    }
+
+    .sidebar-link.active {
+        border-right-color: transparent;
+        border-bottom-color: var(--primary);
+    }
+
+    .sidebar-footer {
+        display: flex;
+        gap: 0.5rem;
+        padding: var(--spacing-md);
+    }
+
+    .sidebar-footer .sidebar-link {
+        flex: 1;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+}
