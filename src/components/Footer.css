@@ -131,32 +131,7 @@
     gap: var(--spacing-md);
 }
 
-.footer-bottom p {
-    margin: 0;
-    font-size: var(--text-sm);
-    color: var(--text-muted);
 }
-
-.footer-legal {
-    display: flex;
-    gap: var(--spacing-lg);
-}
-
-.footer-legal a {
-    font-size: var(--text-sm);
-    color: var(--text-muted);
-    transition: color var(--transition-fast);
-}
-
-.footer-legal a:hover {
-    color: var(--primary-light);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media (max-width: 768px) {

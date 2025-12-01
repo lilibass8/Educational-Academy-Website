@@ -109,21 +109,4 @@ const Footer = () => {
                                     <circle cx="8" cy="7" r="1.5" stroke="currentColor" strokeWidth="1.5" />
                                 </svg>
                                 <span>مسقط، سلطنة عُمان</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="footer-bottom">
-                    <p>&copy; {currentYear} أكاديمية المعرفة. جميع الحقوق محفوظة.</p>
-                    <div className="footer-legal">
-                        <a href="#privacy">سياسة الخصوصية</a>
-                        <a href="#terms">الشروط والأحكام</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
-};
-
-export default Footer;
+                                export default Footer;

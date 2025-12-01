@@ -9,6 +9,7 @@ import AdminLogin from './pages/AdminLogin';
 import AdminLayout from './components/admin/AdminLayout';
 import AdminDashboard from './pages/AdminDashboard';
 import EnrollmentsManagement from './pages/admin/EnrollmentsManagement';
+import CoursesManagement from './pages/admin/CoursesManagement';
 import ProtectedRoute from './components/ProtectedRoute';
 import coursesData from './data/courses';
 import sampleEnrollments from './data/sampleEnrollments';
@@ -75,33 +76,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                {/* Public Routes */}
-                <Route path="/" element={<HomePage />} />
-                <Route path="/admin/login" element={<AdminLogin />} />
-
-                {/* Protected Admin Routes */}
-                <Route path="/admin" element={
-                    <ProtectedRoute>
-                        <AdminLayout />
-                    </ProtectedRoute>
-                }>
-                    <Route index element={<AdminDashboard />} />
-                    <Route path="enrollments" element={<EnrollmentsManagement />} />
-                    <Route path="courses" element={<div style={{ padding: '2rem' }}>
-                        <h1>إدارة الدورات</h1>
-                        <p>قيد الإنشاء...</p>
-                    </div>} />
-                    <Route path="statistics" element={<div style={{ padding: '2rem' }}>
-                        <h1>الإحصائيات</h1>
-                        <p>قيد الإنشاء...</p>
-                    </div>} />
-                </Route>
-
-                {/* Catch all */}
-                <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-        </Router>
-    );
+                );
 }
 
-export default App;
+                export default App;
