@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getCourses, getEnrollments } from '../utils/storage';
+import { getCourses, getEnrollments } from '../../utils/storage';
 import './EnrollmentsManagement.css';
 
 const EnrollmentsManagement = () => {
