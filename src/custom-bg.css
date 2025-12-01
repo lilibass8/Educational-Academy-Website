@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(135deg, #0c0049 0%, #1a0a4e 50%, #0c0049 100%) !important;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  background: transparent;
+}
