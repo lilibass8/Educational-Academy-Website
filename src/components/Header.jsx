@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -40,7 +41,7 @@ const Header = () => {
                                 </svg>
                             </div>
                             <div className="logo-text">
-                                <h2>أكاديمية المعرفة</h2>
+                                <h2>أكاد يمية المعرفة</h2>
                                 <p className="logo-subtitle">رحلة التعلم تبدأ هنا</p>
                             </div>
                         </div>
@@ -54,7 +55,7 @@ const Header = () => {
                         </nav>
 
                         <div className="header-actions desktop-actions">
-                            <button className="btn btn-outline">تسجيل الدخول</button>
+                            <Link to="/login" className=" btn btn-outline">تسجيل الدخول</Link>
                             <button className="btn btn-primary">ابدأ الآن</button>
                         </div>
 
@@ -130,9 +131,9 @@ const Header = () => {
                     </nav>
 
                     <div className="sidebar-actions">
-                        <button className="btn btn-outline btn-full" onClick={closeMobileMenu}>
+                        <Link to="/login" className="btn btn-outline btn-full" onClick={closeMobileMenu}>
                             تسجيل الدخول
-                        </button>
+                        </Link>
                         <button className="btn btn-primary btn-full" onClick={closeMobileMenu}>
                             ابدأ الآن
                         </button>

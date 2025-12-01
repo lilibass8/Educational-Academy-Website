@@ -7,6 +7,7 @@ import CourseCard from './components/CourseCard';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import Login from './pages/Login';
 import AdminLogin from './pages/AdminLogin';
 import AdminLayout from './components/admin/AdminLayout';
 import AdminDashboard from './pages/AdminDashboard';
@@ -77,6 +78,7 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/admin/login" element={<AdminLogin />} />
 
                 <Route path="/admin" element={
